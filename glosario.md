@@ -1,37 +1,44 @@
 # Glosario y mapa de navegación
 
-Este archivo ofrece definiciones breves y lleva a las síntesis principales. No reemplaza los documentos fuente.
+Este mapa conecta los temas del compendio y define términos usados en la documentación de Sumatoria.
 
 ## Navegación
 
+- [Informe académico](informe-academico.docx) · [PDF](informe-academico.pdf)
 - [Visión y alcance](proyecto/vision-y-alcance.md)
 - [Módulos y madurez](proyecto/modulos-y-madurez.md)
 - [Arquitectura actual](arquitectura/estado-actual.md)
 - [Decisiones y pendientes](arquitectura/decisiones-y-pendientes.md)
 - [Hitos](planificacion-y-avances/hitos.md)
 - [Estado agregado](planificacion-y-avances/estado-agregado.md)
-- [Pruebas y validaciones](pruebas-y-validacion/resultados.md)
+- [Pruebas](pruebas-y-validacion/resultados.md)
+- [Anexos y procedencia](anexos/README.md)
+- [Modelo de datos conceptual](anexos/modelo-conceptual.svg)
 
 ## Términos
 
-| Término | Significado en este compendio | Estado o distinción relevante |
+| Término | Significado | Distinción de estado |
 |---|---|---|
-| SumatoriaCO | Empresa asociada al producto. | No es el nombre del equipo de desarrollo. |
-| EFFIXI | Equipo que desarrolla Sumatoria. | No confundir con la empresa cliente ni con el sistema. |
-| Sumatoria | Sistema/proyecto descrito en estos documentos. | Algunas funciones están implementadas y otras son parciales o propuestas. |
-| ADR | Registro de una decisión de arquitectura. | La existencia de un ADR no implica aprobación; revisar su estado explícito. |
-| Backlog | Conjunto de tareas registradas para trabajo futuro o en curso. | Una tarea escrita no demuestra que se haya ejecutado. |
-| Kanban | Vista o flujo visual para organizar trabajo. | Hay interfaz en el código; el flujo completo conectado no se considera validado aquí. |
-| STAGING | Entorno de validación distinto de producción. | El registro citado describe validaciones concretas; no confirma el estado actual de los recursos. |
-| E2E | Prueba de extremo a extremo que recorre varios componentes. | La evidencia descrita aquí cubre una lectura de proyecto, no todo el backend. |
-| U0–U7 | Unidades numeradas en la migración arquitectónica documentada. | La documentación marca el ciclo MIG-ARCH-001 como cerrado; esto no cierra todo el producto. |
-| `main` | Rama integrada observada en cada clon local. | La consulta en vivo a GitHub no estuvo disponible en la fecha de corte. |
-| Rama no integrada | Rama cuyo tip local no está contenido en `main` local. | Puede contener evidencia o cambios útiles; no equivale a integración ni a cierre. |
-| PASS | Resultado positivo de una validación con alcance definido. | No es un porcentaje global ni se extiende a funciones fuera del gate. |
-| PARTIAL | Cobertura incompleta en una matriz o gate específico. | No significa automáticamente fallo ni representa por sí sola todo el producto. |
-| PENDING | Tarea o criterio aún no cerrado según el registro citado. | Debe acompañarse de la fecha y fuente del snapshot. |
-| IMPLEMENTADO | Código actual contiene la capacidad descrita. | No implica despliegue ni validación funcional completa. |
-| PARCIAL | Existe una parte del flujo, pero falta integración o evidencia de cierre. | Aplicado por capacidad, no como puntuación total del producto. |
-| PROTOTIPO | Interfaz o prueba de concepto sin flujo operativo completo demostrado. | No debe describirse como función productiva. |
-| PROPUESTO | Diseño o alcance planteado. | No implica implementación. |
-| HISTÓRICO | Evidencia de una etapa anterior. | No describe automáticamente el estado actual. |
+| SumatoriaCO | Empresa vinculada al sistema. | No es el equipo de desarrollo ni el nombre del producto. |
+| EFFIXI | Equipo que desarrolla Sumatoria. | No se usa como nombre de empresa cliente. |
+| Sumatoria | Sistema y proyecto descrito en este compendio. | Sus módulos tienen estados distintos. |
+| APT | Proyecto académico aplicado usado para organizar la entrega formativa. | Los requisitos curriculares oficiales deben confirmarse con la institución. |
+| ADR | Registro de una decisión de arquitectura. | Un ADR puede estar propuesto, activo, aceptado o reemplazado; se respeta el estado escrito en la fuente. |
+| Backlog | Lista priorizada o registrada de trabajo por realizar. | Una tarea en el backlog no prueba que se haya ejecutado. |
+| Scrum | Marco de trabajo iterativo descrito en la planificación del proyecto. | La fuente menciona ciclos de dos semanas; no se encontraron evidencias completas de todas las ceremonias. |
+| Kanban | Método visual para gestionar el flujo de tareas. | La presencia de una vista Kanban no demuestra por sí sola persistencia ni operación completa. |
+| Definition of Done | Criterios acordados para considerar terminado un elemento. | Se requiere evidencia de criterios aplicados; una plantilla no demuestra cumplimiento. |
+| STAGING | Ambiente de validación separado de producción. | Un registro histórico de despliegue no confirma su estado actual. |
+| E2E | Prueba de extremo a extremo entre varios componentes. | El caso documentado cubre una lectura acotada de proyecto. |
+| PostgreSQL 16.15 | Versión del motor indicada en los registros de validación local. | No equivale a una inspección actual de una instancia remota. |
+| U0–U7 | Unidades de la migración arquitectónica MIG-ARCH-001. | El gate de migración se reportó cerrado; el backlog posterior conserva trabajo pendiente. |
+| main | Rama integrada observada en cada checkout local. | La consulta en vivo de ramas fuente no fue posible en la fecha de corte. |
+| Rama no integrada | Cambio que solo aparece en una referencia separada de main local. | Puede aportar evidencia o código, pero no se atribuye a main. |
+| PASS | Resultado positivo para un criterio y entorno definidos. | No se extrapola a funciones fuera del gate probado. |
+| PARTIAL | Evidencia o implementación cubre solo una parte del flujo. | No significa necesariamente fallo. |
+| PENDING | Trabajo o criterio abierto en el snapshot citado. | Debe leerse con su fecha y alcance. |
+| IMPLEMENTADO | El código observado contiene la capacidad nombrada. | No afirma despliegue ni validación completa. |
+| PARCIAL | Hay componentes, pero falta una parte del flujo o evidencia de cierre. | Se aplica a una capacidad concreta. |
+| PROTOTIPO | Interfaz o prueba de concepto sin operación integral demostrada. | No equivale a una función disponible a usuarios. |
+| PROPUESTO | Requisito o alcance en planificación. | No implica que exista en el producto. |
+| HISTÓRICO | Evidencia de un corte previo. | Se conserva para explicar evolución, no como estado actual. |

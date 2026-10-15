@@ -1,27 +1,27 @@
-# Visión y alcance
+# Visión y alcance del proyecto
 
-## Identidad
+## Identidad y contexto
 
-- **Empresa:** SumatoriaCO.
-- **Equipo de desarrollo:** EFFIXI.
-- **Sistema/proyecto:** Sumatoria.
+SumatoriaCO es la empresa, EFFIXI es el equipo de desarrollo y Sumatoria es el sistema. Las fuentes de planificación presentan Sumatoria como una plataforma para apoyar la gestión de proyectos de arquitectura y construcción.
 
-## Problema y objetivo
+El problema descrito es la dispersión de información entre cartera, planificación, compras, documentos y seguimiento. Las fuentes no entregan una línea base cuantitativa de tiempos, costos, errores o satisfacción de usuarios. Por tanto, este compendio presenta el problema como contexto del proyecto, no como un impacto medido.
 
-La documentación de planificación describe la necesidad de reunir información de proyectos de arquitectura y construcción que hoy puede estar repartida entre cartera, planificación, abastecimiento, documentos y seguimiento en terreno. El objetivo planteado para Sumatoria es apoyar la gestión operacional de proyectos y dar continuidad a la información desde su planificación hasta el seguimiento de actividades y compras.
+## Objetivo de proyecto
 
-Esta descripción resume el propósito documental. No afirma que todas las operaciones enumeradas estén automatizadas o integradas en la versión actual.
+La formulación académica de septiembre propone evolucionar Sumatoria hacia una plataforma modular que centralice la gestión de cartera y proyectos, conserve los flujos requeridos y separe responsabilidades entre interfaz, servicios y datos. Los objetivos específicos documentados incluyen modularizar el frontend, establecer un backend con Fastify y acceso a PostgreSQL, reconciliar los flujos de migración y completar gates independientes.
+
+Los dos últimos objetivos no se consideran resultados globales terminados por el solo hecho de que la migración tenga un gate cerrado: el backlog posterior conserva trabajo en curso y pendiente, y no hay validación completa de todos los recorridos del producto.
 
 ## Usuarios previstos
 
-Las fuentes describen perfiles que participan en gestión de proyectos, trabajo en terreno, inspección técnica y compras/control de gestión. Se presentan como **usuarios previstos** del sistema; no se infiere que cada perfil, permiso o recorrido esté habilitado en producción.
+La planificación menciona perfiles relacionados con gestión de proyectos, trabajo en terreno, inspección técnica y compras. El uso real por cada perfil, el alcance de sus permisos y la cobertura de cada recorrido no se deducen de esa lista. Se requiere validación funcional y de usuarios para sostener afirmaciones sobre disponibilidad o impacto.
 
-## Alcance propuesto y estado observado
+## Alcance propuesto y capacidad observada
 
-Los documentos de planteamiento proponen capacidades para cartera y fichas de proyecto, planificación, seguimiento visual, minutas, documentación, compras, materiales, proveedores, calidad y reportes. También describen integraciones externas. Ese alcance es **PROPUESTO** hasta que el código actual o una validación acotada respalden una capacidad específica.
+El material de planteamiento describe cartera, fichas de proyecto, planificación, tareas, minutas, documentación, compras, materiales, proveedores, calidad y reportes. Ese catálogo es **PROPUESTO** como alcance del producto. Las capacidades con evidencia de código o validación concreta se identifican en [módulos y madurez](modulos-y-madurez.md).
 
-En el código de `PR-SUM-CO-PC` hay interfaces React/Tauri y un backend Fastify con rutas para proyectos, usuario, auditoría y almacenamiento. La integración entre pantallas y backend varía por flujo. La documentación registra una lectura acotada de proyecto desde STAGING; no es evidencia de operación integral de todos los módulos. Véase [módulos y madurez](modulos-y-madurez.md) y [resultados](../pruebas-y-validacion/resultados.md).
+La fuente académica de avance usada para esta síntesis tiene corte 30-09-2026. Sus estados de migración se leen como históricos porque el gate formal de migración se reportó cerrado el 01-10 y luego hubo registros de identidad y lectura de staging el 03-10.
 
-## Procedencia y límites
+## Procedencia
 
-Síntesis basada en `PR-SUM-CO-DOCS/00-Informacion-general/README-proyecto.md`, `PR-SUM-CO-DOCS/01-Documentacion/SUMATORIA/Planteamiento/DESCRIPCION_MODULOS_PROYECTO_SUMATORIA_ERP.txt` y el código de `PR-SUM-CO-PC` en `main` al corte. La descripción de módulos proviene de una propuesta emitida el **2026-08-15**; no se trasladan sus cifras comerciales, presupuesto, horas ni plazo.
+Síntesis de la documentación de visión y módulos de PR-SUM-CO-DOCS, del informe grupal APT versionado y leído desde Git como antecedente histórico, y del código de PR-SUM-CO-PC en el checkout local de main al corte 15-10-2026. No se copiaron informes, guías ni datos personales.

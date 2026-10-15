@@ -1,24 +1,26 @@
 # Decisiones y pendientes
 
-Este resumen conserva el estado indicado por cada fuente. La existencia de un ADR o de código no transforma una propuesta en decisión aprobada.
+Esta síntesis conserva el estado que indican las fuentes. Un diseño, un ADR o código presente no convierten por sí solos una decisión en aprobada ni cierran la funcionalidad.
 
-## Decisiones documentadas
+## Decisiones y baselines documentadas
 
-| Tema | Estado que declara la fuente | Síntesis divulgable | Fuente y límite |
-|---|---|---|---|
-| Reglas centrales de dominio | D1–D9 se presentan como cerradas | Se registran reglas para abastecimiento, planificación, membresía por proyecto, trazabilidad y operación principalmente en línea. | `PR-SUM-CO-DOCS/03-Modelo-de-datos/modelo-v2/02-Documentacion/DECISIONES-D1-D9.md`. La síntesis omite políticas financieras y detalles de permisos. |
-| Freeze de arquitectura de migración | Aprobado según el registro asociado a ADR-0009 | Se congeló un baseline para ejecutar la migración priorizando preservar capacidades existentes. | `PR-SUM-CO-DOCS/09-Trazabilidad/decisiones/ADR-0009-architecture-freeze-approved.md`. El alcance es el freeze de migración, no el cierre del producto. |
-| Gestión de identidad externa previa al contexto | `ACTIVE` en el encabezado de ADR-0013 | Se documenta una decisión en curso sobre resolución controlada de identidad externa. | `PR-SUM-CO-DOCS/09-Trazabilidad/decisiones/ADR-0013-controlled-pre-context-external-identity-resolution.md`. No se presenta como decisión cerrada. |
+| Tema | Estado documentado | Síntesis pública |
+|---|---|---|
+| Stack de cliente | Baseline observada en código | React/Vite para la interfaz y Tauri para escritorio. La presencia del stack no acredita empaquetado vigente. |
+| Backend | Implementación integrada en el checkout local de main | La migración hacia Node.js/Fastify reemplazó el runtime Express legado para el alcance integrado. No implica que todas las features estén migradas. |
+| Modelo relacional | V2.2.0 FINAL para bootstrap nuevo según release del 26-09-2026 | Los cambios posteriores se registran mediante migraciones forward. No se publica SQL ni detalles de permisos. |
+| Freeze de migración | Aprobado en registro de octubre | Fijó un baseline y criterios de preservación para MIG-ARCH-001. El gate formal se reportó cerrado el 01-10. |
+| Resolución de identidad externa | ADR relacionado aparece como ACTIVE | El código integrado y la lectura E2E documentada aportan evidencia, pero el estado del ADR no se presenta como cerrado si la fuente no lo marca así. |
 
-Los ADR 0001–0012 no comparten en sus encabezados un campo normalizado de estado. Por ello, este compendio no los clasifica en bloque como aprobados; cada decisión requeriría revisar su resolución explícita antes de divulgarla como cerrada.
+## Pendientes y límites
 
-## Pendientes de seguimiento
+- El snapshot integrado de tareas del 03-10 conserva 33 pendientes y 6 en curso de 39 unidades. El cierre de MIG-ARCH-001 no cierra ese backlog posterior.
+- Falta evidencia de ciclos Scrum completos, retrospectivas y Definition of Done aplicado por incremento.
+- No se encontraron mediciones de rendimiento, impacto, satisfacción ni objetivos de negocio cuantificados.
+- No se verificó el estado actual de GCP, producción, backups ni recuperación.
+- La documentación no aporta la malla académica oficial para asignar competencias curriculares; debe cotejarse con la guía institucional.
+- Las ramas fuente no integradas se basan en referencias cacheadas. No se afirma que sigan activas en GitHub.
 
-- El checklist integrado de DOCS conserva tareas pendientes y en curso. Su snapshot y limitaciones están en [estado agregado](../planificacion-y-avances/estado-agregado.md).
-- Los registros de migración describen una etapa cerrada; ese cierre no reemplaza la validación independiente de recorridos funcionales pendientes.
-- La validación STAGING citada es específica de una lectura. No constituye aprobación general de autenticación, escritura, producción o de todo el backend.
-- Las ramas no integradas contienen propuestas de reconciliación y evidencia adicional. Se describen por separado y no cambian el estado de `main`.
+## Fuentes y tratamiento
 
-## Cómo interpretar esta página
-
-Las decisiones funcionales se resumen sin replicar manuales ni SQL. Los diseños objetivo se mantienen como **PROPUESTO** hasta tener aprobación explícita; los asuntos que las fuentes no resuelven permanecen **PENDIENTE** o **REVISAR**.
+Se consultaron registros ADR, release de base de datos, gate de migración, checklist de tareas y el código local de PC main. Los textos originales de arquitectura, operación y seguridad no se copian en este repositorio público.

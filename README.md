@@ -1,19 +1,18 @@
-# SUM-CO-DOCS
+# Compendio académico de Sumatoria
 
-## Compendio académico de Sumatoria
+Este repositorio reúne un informe académico y síntesis públicas sobre el desarrollo de Sumatoria. El documento principal es el [informe académico en DOCX](informe-academico.docx); también está disponible en [PDF](informe-academico.pdf). La documentación Markdown facilita la navegación y mantiene la procedencia de las afirmaciones.
 
-Este compendio reúne síntesis documentales para uso académico, seguimiento del proyecto y retroalimentación. Su fecha de corte es **2026-10-15**. No sustituye a los repositorios oficiales ni certifica por sí solo el funcionamiento del producto.
+**Fecha de corte documental:** 15 de octubre de 2026.
 
-### Identidad y alcance
+## Identidad
 
 - **SumatoriaCO** es la empresa.
 - **EFFIXI** es el equipo que desarrolla Sumatoria.
-- **Sumatoria** es el sistema/proyecto.
+- **Sumatoria** es el sistema y proyecto descrito.
 
-El compendio contiene documentación y referencias; no contiene código del producto, instrucciones para agentes, datos de clientes, credenciales ni configuraciones operacionales. Las capacidades se etiquetan según su evidencia, no según la existencia de una propuesta o pantalla.
+## Navegación
 
-### Navegación
-
+- [Informe académico](informe-academico.docx) · [PDF de lectura](informe-academico.pdf)
 - [Glosario y mapa](glosario.md)
 - [Visión y alcance](proyecto/vision-y-alcance.md)
 - [Módulos y madurez](proyecto/modulos-y-madurez.md)
@@ -22,24 +21,30 @@ El compendio contiene documentación y referencias; no contiene código del prod
 - [Hitos](planificacion-y-avances/hitos.md)
 - [Estado agregado](planificacion-y-avances/estado-agregado.md)
 - [Pruebas y validaciones](pruebas-y-validacion/resultados.md)
+- [Anexos y procedencia](anexos/README.md)
+- [Modelo de datos conceptual](anexos/modelo-conceptual.svg)
 
-### Fuentes y fecha de corte
+## Fuentes y límites
 
-Se consultaron localmente `PR-SUM-CO-DOCS` (`main`, `4b4aea4290bd90aa2ff3bb4508516e7b70044064`) y `PR-SUM-CO-PC` (`main`, `62d80ccdad9ebb703c88ba7a507dd913182cb14c`). También se inspeccionaron las referencias de ramas disponibles en esos clones para distinguir cambios integrados de cambios no integrados.
+La síntesis se preparó contrastando el código de PR-SUM-CO-PC con la documentación de PR-SUM-CO-DOCS. Los checkouts locales consultados tenían PC y DOCS en main. La rama de continuación parte de la primera edición publicada del compendio.
 
-El 2026-10-15, las consultas directas de ramas a GitHub fallaron porque el equipo no pudo resolver `github.com`. Por tanto, las referencias remotas locales se usan únicamente como evidencia cacheada; no confirman el estado remoto actual. Las fechas de commits se identifican como fechas de commit, no como horas o fechas de trabajo.
+Las referencias a ramas remotas de los repositorios fuente eran referencias cacheadas localmente. El 15 de octubre de 2026, GitHub no respondió a una consulta de solo lectura desde este equipo. Por eso, este compendio no afirma cuál es el estado remoto actual de esas ramas. Esta limitación no afecta la identificación de los commits que ya estaban integrados en los checkouts locales de main.
 
-### Etiquetas de madurez
+Las guías DUOC se usaron para organizar los apartados académicos y definir los entregables de la ruta Scrum/Kanban. No se adjuntan ni se reproducen. El informe grupal versionado eliminado en el checkout fuente se leyó desde Git como antecedente histórico fechado el 30 de septiembre de 2026; no se restauró ni se incorporó. Los diarios individuales, nombres y asignaciones personales se excluyeron.
 
-- **IMPLEMENTADO**: hay implementación en el código actual para el alcance indicado.
-- **PARCIAL**: existe parte del flujo, pero faltan integración, cobertura o validación de extremo a extremo.
-- **PROTOTIPO**: hay interfaz o prueba de concepto sin evidencia suficiente del flujo operativo completo.
-- **PROPUESTO**: aparece en un diseño o plan, sin evidencia de implementación actual.
-- **PENDIENTE**: el registro vigente lo deja por hacer o requiere decisión.
-- **HISTÓRICO**: describe una etapa anterior; no es el estado actual.
+El compendio no incluye código, SQL, permisos, credenciales, configuración operativa, identificadores de infraestructura, hallazgos internos de seguridad ni documentos completos de terceros. Las referencias de procedencia describen repositorio y documento, no exponen rutas privadas del equipo.
 
-Una etiqueta se aplica a una capacidad y alcance concretos. Un resultado documentado no equivale a una reproducción independiente. Los detalles y procedencia están en cada documento.
+## Estados de madurez
 
-### Límites
+- **IMPLEMENTADO:** el código observado contiene la capacidad descrita. No implica despliegue ni validación integral.
+- **PARCIAL:** se observan componentes, pero falta parte del flujo o su validación.
+- **PROTOTIPO:** interfaz o prueba de concepto sin flujo operativo completo demostrado.
+- **PROPUESTO:** alcance descrito en planificación o diseño, sin evidencia suficiente de implementación.
+- **PENDIENTE:** la fuente de seguimiento lo mantiene abierto o falta evidencia para resolverlo.
+- **HISTÓRICO:** refleja un corte anterior y no representa automáticamente el estado actual.
 
-El contenido evita nombres de responsables, asignaciones individuales, identificadores de infraestructura, datos personales, hallazgos de seguridad internos y documentos de terceros. La evidencia de STAGING se presenta con su alcance acotado y atribución documental. No se realizó una inspección independiente de GCP ni una nueva ejecución de pruebas.
+## Cómo usarlo
+
+Cada resultado conserva su alcance y fuente. Los PASS citados corresponden a gates documentados, no a una calificación global. El registro de lectura en staging es un caso acotado; no certifica todas las rutas, usuarios, permisos, escritura ni producción. No se repitieron pruebas ni se inspeccionó GCP durante la preparación de esta edición.
+
+Este compendio complementa y no reemplaza los repositorios oficiales del sistema y de su documentación.
