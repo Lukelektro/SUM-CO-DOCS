@@ -1,26 +1,25 @@
 # Estado agregado y evolución por ramas
 
-## Estado integrado en los checkouts locales
+## Estado integrado en main
 
-Fecha de corte: **15-10-2026**. PC y DOCS se observaron en main en sus checkouts locales. Los checkouts estaban limpios en PC. DOCS conservaba una eliminación local del informe APT anterior y material DUOC sin seguimiento; nada de ese estado se modificó.
+Fecha de corte: **15-10-2026**. Ese día se consultaron las referencias actuales de GitHub y se hizo fast-forward de `main` en ambos repositorios fuente. PC quedó en `ceb973ba3c23aab3865b6bbc1073e403bc93cd61`; DOCS quedó en `cd46933f17e2071b4132894ee91903a782103279`. Ambos cambios están integrados en los checkouts locales y fueron observados en `origin/main` después de la consulta remota.
 
-El checklist integrado de DOCS, revisado al 03-10-2026, contiene 39 unidades: **33 PENDING, 6 IN_PROGRESS, 0 BLOCKED, 0 FAIL y 0 PASS**. Es el estado de ese listado, no un indicador global del producto.
+PC incorporó 13 commits desde el corte local anterior. El conjunto integra el flujo de autenticación Google para escritorio con PKCE e Identity Platform, ampliaciones de pruebas frontend y backend y la implementación de creación de proyectos sobre Database 2.2.3. La presencia en `main` prueba integración del código, no despliegue ni disponibilidad para usuarios.
 
-El gate formal MIG-ARCH-001 aparece PASS/CLOSED en el reporte del 01-10. Esa afirmación pertenece a su gate y a su matriz. No contradice que el checklist posterior mantenga trabajo de producto y tareas post-migración abiertos.
+DOCS incorporó 28 commits desde el corte local anterior. La estructura de seguimiento ahora incluye un backlog global con frentes y criterios de aceptación, vínculos entre registros de tareas y ese backlog, y logs de ejecución fechados. También incorpora la documentación del candidato Database 2.2.3 y de la sincronización del estado. Se omiten asignaciones personales, prompts, reglas de agentes y documentación operativa interna de este compendio público.
 
-## Hitos integrados
+## Estado de trabajo y límites
 
-El historial local de PC main incluye como ancestros la migración de arquitectura y el runtime de identidad. DOCS main contiene el gate formal y el registro de lectura en staging. La relación de ancestro acredita integración del commit en ese checkout; no prueba cobertura funcional completa.
+El registro de sincronización del 15-10 describe 21 frentes globales y 39 fichas relacionadas, con criterios de aceptación y enlaces de trazabilidad. Es un esquema de seguimiento, no una medición porcentual del producto. Las fichas conservan estados y evidencias anteriores; su reorganización no equivale a cerrar tareas.
 
-## Cambios que solo aparecían en referencias cacheadas
+Database 2.2.3 figura como **CANDIDATE**: la documentación reporta validación local de la migración y de las rutas de creación, pero no despliegue en STAGING, Cloud SQL o producción ni asignación productiva del nuevo permiso de creación. El resultado anterior de lectura HTTP 200 en STAGING corresponde a Database 2.2.2 y a una lectura acotada; no se extiende a la nueva operación de escritura.
 
-| Repositorio | Evidencia disponible | Estado respecto de main local | Límite |
-|---|---|---|---|
-| PC | Un commit exclusivo de validación post-migración. | No integrado en main del checkout observado. | No atribuir su prueba o cambio a main. |
-| DOCS | Siete commits exclusivos en una referencia de reconciliación de tareas. El snapshot indicado allí era 25 PENDING, 12 IN_PROGRESS y 2 BLOCKED. | No integrado en main del checkout observado. | No reemplaza el snapshot integrado de 39 unidades. |
-| DOCS | Un commit exclusivo de handoff OIDC y tres commits en una referencia de borrador post-migración. | No integrados según el grafo local. | Los nombres y asignaciones individuales se omiten; las referencias actuales de GitHub no se verificaron. |
-| PC | Referencia histórica anterior a la migración. | Divergente y no representativa de main actual. | Se clasifica como histórica por su relación con el historial local, no por estado remoto. |
+PC estaba limpio en `main` tras el fast-forward. DOCS conserva cambios locales previos del usuario en material DUOC (una eliminación y archivos/carpetas sin seguimiento); se dejaron intactos. El repositorio de este compendio sigue en `docs/academic-compendium-v2`, con el `.DS_Store` local sin seguimiento preservado.
 
-## Estado remoto
+## Ramas y relación con main
 
-La consulta de solo lectura a GitHub falló el 15-10-2026 porque este equipo no pudo resolver github.com. No se hizo fetch a las fuentes. Las referencias remotas citadas son las que ya estaban cacheadas y no permiten confirmar ramas nuevas, eliminadas ni cambios posteriores.
+La actualización remota de esta auditoría consultó únicamente `main`; no obtuvo un listado completo actual de ramas. Los logs de DOCS documentan la integración en `main` de la autenticación de escritorio y del candidato Database 2.2.3, y mencionan ramas de trabajo preservadas bajo referencias de archivo. No se afirma que esas referencias sigan publicadas o activas. La evidencia de progreso incorporada aquí corresponde a commits integrados en `main`, no a nombres de ramas.
+
+## Procedencia
+
+Snapshot reproducible mediante los SHAs indicados, los commits integrados en PC y los registros fechados de DOCS del 15-10-2026. No se inspeccionó GCP ni se ejecutaron pruebas durante esta actualización del compendio. Para detalles de alcance de cada resultado, véanse [pruebas y validaciones](../pruebas-y-validacion/resultados.md) y [procedencia](../anexos/procedencia-y-alcance.md).

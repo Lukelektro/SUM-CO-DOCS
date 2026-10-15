@@ -20,8 +20,8 @@ La planificación menciona perfiles relacionados con gestión de proyectos, trab
 
 El material de planteamiento describe cartera, fichas de proyecto, planificación, tareas, minutas, documentación, compras, materiales, proveedores, calidad y reportes. Ese catálogo es **PROPUESTO** como alcance del producto. Las capacidades con evidencia de código o validación concreta se identifican en [módulos y madurez](modulos-y-madurez.md).
 
-La fuente académica de avance usada para esta síntesis tiene corte 30-09-2026. Sus estados de migración se leen como históricos porque el gate formal de migración se reportó cerrado el 01-10 y luego hubo registros de identidad y lectura de staging el 03-10.
+La formulación académica inicial tiene corte 30-09-2026. El gate formal de migración se reportó cerrado el 01-10; después se integraron el flujo de autenticación de escritorio y, el 15-10, una ruta de creación de proyectos sobre Database 2.2.3. La última capacidad sigue como candidata validada localmente, sin despliegue documentado.
 
 ## Procedencia
 
-Síntesis de la documentación de visión y módulos de PR-SUM-CO-DOCS, del informe grupal APT versionado y leído desde Git como antecedente histórico, y del código de PR-SUM-CO-PC en el checkout local de main al corte 15-10-2026. No se copiaron informes, guías ni datos personales.
+Síntesis de la documentación de visión y módulos de PR-SUM-CO-DOCS, del informe grupal APT versionado y leído desde Git como antecedente histórico, y del código de PR-SUM-CO-PC `main` en `ceb973b` al corte 15-10-2026. No se copiaron informes, guías ni datos personales.

@@ -32,8 +32,10 @@ Este mapa conecta los temas del compendio y define términos usados en la docume
 | E2E | Prueba de extremo a extremo entre varios componentes. | El caso documentado cubre una lectura acotada de proyecto. |
 | PostgreSQL 16.15 | Versión del motor indicada en los registros de validación local. | No equivale a una inspección actual de una instancia remota. |
 | U0–U7 | Unidades de la migración arquitectónica MIG-ARCH-001. | El gate de migración se reportó cerrado; el backlog posterior conserva trabajo pendiente. |
-| main | Rama integrada observada en cada checkout local. | La consulta en vivo de ramas fuente no fue posible en la fecha de corte. |
+| main | Rama principal integrada observada en cada repositorio. | El 15-10-2026 se consultó y actualizó `main` de PC y DOCS; los SHAs se indican en el estado agregado. No se obtuvo un inventario completo de ramas remotas. |
 | Rama no integrada | Cambio que solo aparece en una referencia separada de main local. | Puede aportar evidencia o código, pero no se atribuye a main. |
+| Fast-forward | Actualización de una rama cuando su historial remoto desciende del commit local. | En esta actualización se usó para avanzar ambos `main` sin crear merge commit. |
+| Database 2.2.3 | Candidato de evolución del modelo relacional que incorpora creación delegada de proyectos. | Validado localmente según los registros y presente en `main`; no consta desplegado en STAGING o producción. |
 | PASS | Resultado positivo para un criterio y entorno definidos. | No se extrapola a funciones fuera del gate probado. |
 | PARTIAL | Evidencia o implementación cubre solo una parte del flujo. | No significa necesariamente fallo. |
 | PENDING | Trabajo o criterio abierto en el snapshot citado. | Debe leerse con su fecha y alcance. |

@@ -12,8 +12,10 @@ Las fechas se distinguen por origen. Una fecha de commit es un registro de Git, 
 | 2026-10-02 | Fecha de commit | Se registró retiro del runtime Express legado y cierre de la unidad U7 en el historial integrado. | Hito técnico de migración, no de finalización de módulos de negocio. |
 | 2026-10-03 | Fecha de documento y commit | Se documentó resolución OIDC y lectura de un proyecto en STAGING con HTTP 200 reportado. | Evidencia de un camino real acotado; no reproducida durante esta preparación. |
 | 2026-10-03 | Fecha de snapshot | El checklist de main registró 39 unidades: 33 PENDING y 6 IN_PROGRESS. | Conteo de backlog; no es porcentaje de avance del sistema. |
-| 2026-10-04 | Fecha de referencia cacheada | Se observó una rama local no integrada con reconciliación de backend/tareas. | Solo evidencia local cacheada; no confirma actividad remota actual. |
+| 2026-10-04 | Fecha de commit y registro | Se integró en el historial actual el flujo de autenticación de escritorio con Google OAuth, PKCE e Identity Platform. | Código integrado en PC `main`; la documentación registra validaciones del flujo. No demuestra distribución de escritorio ni despliegue de producción. |
+| 2026-10-12 | Fecha de registro y commits | Se consolidó una suite de regresión post-migración para recorridos frontend y contratos de sesión/API. | El registro comunica 251 pruebas y 17 frentes de validación; el ciclo seguía pendiente de revisión final. Conteo reportado, no reejecutado en este compendio. |
+| 2026-10-15 | Fecha de commit y registro | Database 2.2.3 y la creación de proyectos se integraron en `main`; el backlog y los logs de ejecución se reorganizaron para enlazar avance y evidencia. | PC `ceb973b`; DOCS `cd46933`. DB 2.2.3 permanece candidata, con validación local documentada y sin despliegue cloud registrado. |
 
 ## Procedencia
 
-Hitos derivados de documentos de planificación, logs de ejecución y commits integrados en los checkouts locales. Las diferencias temporales se conservan explícitas; no se convierten en horas trabajadas.
+Hitos derivados de documentos de planificación, logs de ejecución y commits integrados en `main`. El 15-10-2026 se actualizaron ambas referencias mediante fast-forward desde GitHub; los SHA y su relación con `main` están en [estado agregado](estado-agregado.md). Las fechas de commit, documento y registro se conservan diferenciadas; no se convierten en horas trabajadas.

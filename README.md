@@ -26,11 +26,11 @@ Este repositorio reúne un informe académico y síntesis públicas sobre el des
 
 ## Fuentes y límites
 
-La síntesis se preparó contrastando el código de PR-SUM-CO-PC con la documentación de PR-SUM-CO-DOCS. Los checkouts locales consultados tenían PC y DOCS en main. La rama de continuación parte de la primera edición publicada del compendio.
+La síntesis se preparó contrastando el código de PR-SUM-CO-PC con la documentación de PR-SUM-CO-DOCS. El 15 de octubre de 2026 se consultó GitHub y se actualizaron ambos checkouts de `main` mediante fast-forward: PC quedó en `ceb973ba3c23aab3865b6bbc1073e403bc93cd61` y DOCS en `cd46933f17e2071b4132894ee91903a782103279`. Esos SHAs identifican el estado observado después de la actualización; no se inspeccionaron ambientes cloud.
 
-Las referencias a ramas remotas de los repositorios fuente eran referencias cacheadas localmente. El 15 de octubre de 2026, GitHub no respondió a una consulta de solo lectura desde este equipo. Por eso, este compendio no afirma cuál es el estado remoto actual de esas ramas. Esta limitación no afecta la identificación de los commits que ya estaban integrados en los checkouts locales de main.
+La consulta remota cubrió `main` en cada repositorio fuente. No se descargó un inventario completo de ramas remotas, por lo que no se afirma el estado actual de ramas distintas de `main`. Los cambios incorporados al compendio son los integrados en esos dos `main`; las afirmaciones de despliegue y pruebas conservan el alcance de sus registros originales.
 
-Las guías DUOC se usaron para organizar los apartados académicos y definir los entregables de la ruta Scrum/Kanban. No se adjuntan ni se reproducen. El informe grupal versionado eliminado en el checkout fuente se leyó desde Git como antecedente histórico fechado el 30 de septiembre de 2026; no se restauró ni se incorporó. Los diarios individuales, nombres y asignaciones personales se excluyeron.
+Las guías DUOC se usaron para organizar los apartados académicos y definir los entregables de la ruta Scrum/Kanban. No se adjuntan ni se reproducen. El informe grupal versionado eliminado en el checkout fuente se leyó desde Git como antecedente histórico fechado el 30 de septiembre de 2026; no se restauró ni se incorporó. Los diarios individuales, nombres, asignaciones personales, prompts y reglas de agentes se excluyeron.
 
 El compendio no incluye código, SQL, permisos, credenciales, configuración operativa, identificadores de infraestructura, hallazgos internos de seguridad ni documentos completos de terceros. Las referencias de procedencia describen repositorio y documento, no exponen rutas privadas del equipo.
 
@@ -45,6 +45,6 @@ El compendio no incluye código, SQL, permisos, credenciales, configuración ope
 
 ## Cómo usarlo
 
-Cada resultado conserva su alcance y fuente. Los PASS citados corresponden a gates documentados, no a una calificación global. El registro de lectura en staging es un caso acotado; no certifica todas las rutas, usuarios, permisos, escritura ni producción. No se repitieron pruebas ni se inspeccionó GCP durante la preparación de esta edición.
+Cada resultado conserva su alcance y fuente. Los PASS citados corresponden a gates documentados, no a una calificación global. Los registros nuevos describen validaciones locales de Database 2.2.3 y rutas de creación de proyectos; esa versión sigue como candidata y no consta desplegada. El registro de lectura en STAGING es un caso acotado; no certifica todas las rutas, usuarios, escritura ni producción. No se repitieron pruebas ni se inspeccionó GCP durante la preparación de esta edición.
 
 Este compendio complementa y no reemplaza los repositorios oficiales del sistema y de su documentación.
